@@ -16,8 +16,8 @@ const { ExpressPeerServer } = require("peer");
 // debug: true,
 // };
 const options = {
-  key: fs.readFileSync("/key.pem"),
-  cert: fs.readFileSync("/cert.pem"),
+  key: fs.readFileSync("./key.pem"),
+  cert: fs.readFileSync("./cert.pem"),
   debug: true,
 };
 const peerServer = ExpressPeerServer(server, options);
