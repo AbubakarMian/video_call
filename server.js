@@ -1,7 +1,14 @@
 const express = require("express");
 const app = express();
 const fs = require('fs');
-const server = require("http").Server(app);
+const options = {
+  key: fs.readFileSync("key.pem"),
+  cert: fs.readFileSync("cert.pem"),
+  // debug: true,
+};
+const server = require("http").createServer(
+  options 
+ ,app);
 const { v4: uuidv4 } = require("uuid");
 app.set("view engine", "ejs");
 const io = require("socket.io")(server, {
@@ -15,15 +22,11 @@ const { ExpressPeerServer } = require("peer");
 //   cert: fs.readFileSync("/srv/www/keys/chain.pem"),
 // debug: true,
 // };
-const options = {
-  key: fs.readFileSync("key.pem"),
-  cert: fs.readFileSync("cert.pem"),
+
+// const peerServer = ExpressPeerServer(server, options);
+const peerServer = ExpressPeerServer(server, {
   debug: true,
-};
-const peerServer = ExpressPeerServer(server, options);
-// const peerServer = ExpressPeerServer(server, {
-//   debug: true,
-// });
+});
 
 app.use("/peerjs", peerServer);
 app.use(express.static("public"));
