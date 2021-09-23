@@ -20,11 +20,10 @@ showChat.addEventListener("click", () => {
 });
 
 const user = prompt("Enter your name");
-// peer = new Peer({host:'peerjs-server.herokuapp.com', secure:true, port:443})
+
 var peer = new Peer(undefined, {
   path: "/peerjs",
-  host: "peerjs-server.herokuapp.com",
-  // host: "/",
+  host: "/",
   port: "443",
 });
 
