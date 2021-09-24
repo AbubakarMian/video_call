@@ -20,7 +20,7 @@ app.use(function (req, res, next) {
   next();
   });
 
-const server = require("http").createServer(
+const server = require("https").createServer(
   options,
   app);
 const { v4: uuidv4 } = require("uuid");
