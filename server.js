@@ -2,8 +2,10 @@ const express = require("express");
 const app = express();
 const fs = require('fs');
 const options = {
-  key: fs.readFileSync("./key.pem"),
-  cert: fs.readFileSync("./cert.pem"),
+  // key: fs.readFileSync("./key.pem"),
+  // cert: fs.readFileSync("./cert.pem"),
+  key: fs.readFileSync("/home2/developmenthatin/public_html/vc3/key.pem"),
+  cert: fs.readFileSync("/home2/developmenthatin/public_html/vc3/cert.pem"),
   // debug: true,
 };
 const server = require("https").createServer(
