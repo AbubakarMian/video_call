@@ -4,8 +4,8 @@ const fs = require('fs');
 const options = {
   // key: fs.readFileSync("./key.pem"),
   // cert: fs.readFileSync("./cert.pem"),
-  key: fs.readFileSync("/home2/developmenthatin/public_html/vc3/key.pem"),
-  cert: fs.readFileSync("/home2/developmenthatin/public_html/vc3/cert.pem"),
+  // key: fs.readFileSync("/home2/developmenthatin/public_html/vc3/key.pem"),
+  // cert: fs.readFileSync("/home2/developmenthatin/public_html/vc3/cert.pem"),
   requestCert: false
   // debug: true,
 };
@@ -17,7 +17,6 @@ app.set("view engine", "ejs");
 const io = require("socket.io")(server, {
   cors: {
     origin: '*',
-    // allow
   }
 });
 const { ExpressPeerServer } = require("peer");
