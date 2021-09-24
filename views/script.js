@@ -25,6 +25,7 @@ var peer = new Peer(undefined, {
   path: "/peerjs",
   host: "/",
   port: "443",
+  or
 });
 
 let myVideoStream;
