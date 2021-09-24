@@ -17,7 +17,7 @@ app.set("view engine", "ejs");
 const io = require("socket.io")(server, {
   cors: {
     origin: '*',
-    allow
+    // allow
   }
 });
 const { ExpressPeerServer } = require("peer");
