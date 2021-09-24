@@ -23,12 +23,12 @@ app.set("view engine", "ejs");
 //   }
 // });
 const io = require("socket.io")(server
-  , {
+  // , {
   
-  cors: {
-    origin: '*',
-  }
-}
+  // cors: {
+  //   origin: '*',
+  // }
+// }
 );
 const { ExpressPeerServer } = require("peer");
 // const options = {
