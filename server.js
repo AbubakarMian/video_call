@@ -10,19 +10,17 @@ const options = {
   // requestCert: false
   // debug: true,
 };
-// app.use(cors())
+app.use(cors())
 
 
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", 
   "Origin, X-Requested-With, Content-Type, Accept");
-  res.header("Access-Control-Allow-Methods", 
-  "GET, POST, PUT, DELETE, OPTIONS");
   next();
   });
 
-const server = require("https").createServer(
+const server = require("http").createServer(
   options,
   app);
 const { v4: uuidv4 } = require("uuid");
