@@ -1,4 +1,5 @@
 const express = require("express");
+var cors = require('cors')
 const app = express();
 const fs = require('fs');
 const options = {
@@ -9,6 +10,7 @@ const options = {
   // requestCert: false
   // debug: true,
 };
+app.use(cors())
 const server = require("https").createServer(
   options,
   app);
@@ -21,12 +23,12 @@ app.set("view engine", "ejs");
 //   }
 // });
 const io = require("socket.io")(server
-//   , {
+  , {
   
-//   cors: {
-//     origin: '*',
-//   }
-// }
+  cors: {
+    origin: '*',
+  }
+}
 );
 const { ExpressPeerServer } = require("peer");
 // const options = {
