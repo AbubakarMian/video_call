@@ -6,16 +6,18 @@ const options = {
   // cert: fs.readFileSync("./cert.pem"),
   key: fs.readFileSync("/home2/developmenthatin/public_html/vc3/key.pem"),
   cert: fs.readFileSync("/home2/developmenthatin/public_html/vc3/cert.pem"),
+  requestCert: false
   // debug: true,
 };
 const server = require("https").createServer(
-  options 
- ,app);
+  options,
+  app);
 const { v4: uuidv4 } = require("uuid");
 app.set("view engine", "ejs");
 const io = require("socket.io")(server, {
   cors: {
-    origin: '*'
+    origin: '*',
+    allow
   }
 });
 const { ExpressPeerServer } = require("peer");
