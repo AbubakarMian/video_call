@@ -8,7 +8,7 @@ const options = {
   // key: fs.readFileSync("/home2/developmenthatin/public_html/vc3/key.pem"),
   // cert: fs.readFileSync("/home2/developmenthatin/public_html/vc3/cert.pem"),
   // requestCert: false
-  debug: true,
+  // debug: true,
 };
 app.use(cors())
 const server = require("https").createServer(

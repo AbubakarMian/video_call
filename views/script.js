@@ -22,17 +22,18 @@ showChat.addEventListener("click", () => {
 
 const user = prompt("Enter your name");
 
-var peer = new Peer(undefined, {
+var peer = new Peer({host:'peerjs-server.herokuapp.com', secure:true, port:443})
+// var peer = new Peer(undefined, {
   
-  // port: 3031,
-  ssl: {
-    key: fs.readFileSync('../key.pem'),
-    cert: fs.readFileSync('../cert.pem')
-  },
-  path: "/peerjs",
-  host: "/",
-  // port: "443",
-});
+//   // port: 3031,
+//   ssl: {
+//     key: fs.readFileSync('../key.pem'),
+//     cert: fs.readFileSync('../cert.pem')
+//   },
+//   path: "/peerjs",
+//   host: "/",
+//   // port: "443",
+// });
 
 let myVideoStream;
 navigator.mediaDevices
