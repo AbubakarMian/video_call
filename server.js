@@ -14,11 +14,20 @@ const server = require("https").createServer(
   app);
 const { v4: uuidv4 } = require("uuid");
 app.set("view engine", "ejs");
-const io = require("socket.io")(server, {
-  cors: {
-    origin: '*',
-  }
-});
+// const io = require("socket.io")(server, {
+  
+//   cors: {
+//     origin: '*',
+//   }
+// });
+const io = require("socket.io")(server
+//   , {
+  
+//   cors: {
+//     origin: '*',
+//   }
+// }
+);
 const { ExpressPeerServer } = require("peer");
 // const options = {
 //   key: fs.readFileSync("/srv/www/keys/my-site-key.pem"),
