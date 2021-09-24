@@ -3,7 +3,6 @@ const videoGrid = document.getElementById("video-grid");
 const myVideo = document.createElement("video");
 const showChat = document.querySelector("#showChat");
 const backBtn = document.querySelector(".header__back");
-const fs = require('fs');
 myVideo.muted = true;
 
 backBtn.addEventListener("click", () => {
@@ -22,18 +21,11 @@ showChat.addEventListener("click", () => {
 
 const user = prompt("Enter your name");
 
-var peer = new Peer({host:'peerjs-server.herokuapp.com', secure:true, port:443})
-// var peer = new Peer(undefined, {
-  
-//   // port: 3031,
-//   ssl: {
-//     key: fs.readFileSync('../key.pem'),
-//     cert: fs.readFileSync('../cert.pem')
-//   },
-//   path: "/peerjs",
-//   host: "/",
-//   // port: "443",
-// });
+var peer = new Peer(undefined, {
+  path: "peerjs.min.js",
+  host: "/",
+  port: "443",
+});
 
 let myVideoStream;
 navigator.mediaDevices
