@@ -16,7 +16,8 @@ const { v4: uuidv4 } = require("uuid");
 app.set("view engine", "ejs");
 const io = require("socket.io")(server, {
   cors: {
-    origin: '*',
+    origin: 'https://development.hatinco.com:3031/*',
+    // origin: '*',
   }
 });
 const { ExpressPeerServer } = require("peer");
