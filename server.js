@@ -40,7 +40,7 @@ const io = require("socket.io")(server
 // }
 );
 const { ExpressPeerServer } = require("peer");
-const options = {
+const options_express_server = {
   ssl:{
     key: fs.readFileSync("key.pem"),
     cert: fs.readFileSync("cert.pem"),
@@ -48,7 +48,7 @@ const options = {
     debug: true,
 };
 
-// const peerServer = ExpressPeerServer(server, options);
+// const peerServer = ExpressPeerServer(server, options_express_server);
 const peerServer = ExpressPeerServer(server, {
   debug: true,
 });
