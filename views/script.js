@@ -19,13 +19,15 @@ showChat.addEventListener("click", () => {
   document.querySelector(".header__back").style.display = "block";
 });
 
+  var peer = new Peer(undefined, {
+    path: "/peerjs",
+    host: "/",
+    port: "443"
+  });
+
 const user = prompt("Enter your name");
 
-var peer = new Peer(undefined, {
-  path: "/peerjs",
-  host: "/",
-  port: "443"
-});
+
 
 let myVideoStream;
 navigator.mediaDevices
