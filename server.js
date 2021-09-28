@@ -48,10 +48,10 @@ const options_express_server = {
     debug: true,
 };
 
-// const peerServer = ExpressPeerServer(server, options_express_server);
-const peerServer = ExpressPeerServer(server, {
-  debug: true,
-});
+const peerServer = ExpressPeerServer(server, options_express_server);
+// const peerServer = ExpressPeerServer(server, {
+//   debug: true,
+// });
 
 app.use("/peerjs", peerServer);
 app.use(express.static("public"));
