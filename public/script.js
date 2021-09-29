@@ -31,6 +31,7 @@ const user = prompt("Enter your name");
 var peer = new Peer({
   path: '/peer/',
   port: 9000,
+  host: "localhost",
   ssl: {
     
     key: 'key.pem',
