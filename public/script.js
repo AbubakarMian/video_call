@@ -28,7 +28,7 @@ const user = prompt("Enter your name");
 //   // host: "/",
 //   port: "443",
 // });
-var peer = new PeerServer({
+var peer = new Peer({
   path: '/peer/',
   port: 9000,
   ssl: {
