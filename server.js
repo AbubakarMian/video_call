@@ -3,8 +3,8 @@ var cors = require('cors')
 const app = express();
 const fs = require('fs');
 const options = {
-  key: fs.readFileSync("key1.pem"),
-  cert: fs.readFileSync("cert1.pem"),
+  key: fs.readFileSync("key.pem"),
+  cert: fs.readFileSync("cert.pem"),
   // key: fs.readFileSync("/home2/developmenthatin/public_html/vc3/key.pem"),
   // cert: fs.readFileSync("/home2/developmenthatin/public_html/vc3/cert.pem"),
   // requestCert: false
