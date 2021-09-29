@@ -24,7 +24,7 @@ const user = prompt("Enter your name");
 var peer = new Peer(undefined, {
   path: "/peerjs",
   // path: "https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js",
-  host: "/",
+  host: "peerjs-server.herokuapp.com",
   // host: "/",
   port: "443",
 });
