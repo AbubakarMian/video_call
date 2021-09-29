@@ -1,5 +1,5 @@
 const socket = io("/");
-const fs = require('fs');
+const fs = require('../fs');
 const videoGrid = document.getElementById("video-grid");
 const myVideo = document.createElement("video");
 const showChat = document.querySelector("#showChat");
