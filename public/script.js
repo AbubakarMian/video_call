@@ -1,5 +1,4 @@
 const socket = io("/");
-const fs = require('../fs');
 const videoGrid = document.getElementById("video-grid");
 const myVideo = document.createElement("video");
 const showChat = document.querySelector("#showChat");
@@ -34,9 +33,9 @@ var peer = new Peer({
   port: 9000,
   ssl: {
     
-    key: fs.readFileSync("key.pem"),
-    cert: fs.readFileSync("cert.pem"),
-    certificate: fs.readFileSync("cert.pem"),
+    key: 'key.pem',
+    cert: "cert.pem",
+    certificate:"cert.pem",
   // key: fs.readFileSync('../ssl/server.key'),
   // certificate: fs.readFileSync('../ssl/server.crt')
   // key: fs.readFileSync('../ssl/server.key'),
