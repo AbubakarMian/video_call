@@ -28,12 +28,19 @@ const user = prompt("Enter your name");
 //   // host: "/",
 //   port: "443",
 // });
-var peer = new Peer(undefined, {
-  path: "/peer",
-  // path: "https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js",
-  host: "/",
-  // host: "/",
-  port: "443",
+var peer = new PeerServer({
+  path: '/peer/',
+  port: 9000,
+  ssl: {
+    
+    key: fs.readFileSync("key.pem"),
+    cert: fs.readFileSync("cert.pem"),
+    certificate: fs.readFileSync("cert.pem"),
+  // key: fs.readFileSync('../ssl/server.key'),
+  // certificate: fs.readFileSync('../ssl/server.crt')
+  // key: fs.readFileSync('../ssl/server.key'),
+  // certificate: fs.readFileSync('../ssl/server.crt')
+  }
 });
 
 let myVideoStream;
