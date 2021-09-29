@@ -31,7 +31,7 @@ const user = prompt("Enter your name");
 var peer = new Peer({
   path: '/peer/',
   port: 9000,
-  host: "localhost",
+  host: "sales.hatinco.com",
   ssl: {
     
     key: 'key.pem',
